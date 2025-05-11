@@ -1,0 +1,236 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTES */
+@font-face {
+    font-family: 'idroid';
+    src: url(fontes/idroid.otf) format(opentype);
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* BASE */
+body {
+    font-family: 'Work Sans', sans-serif;
+    background-image: linear-gradient(to bottom, #379634, #74F2CE, #7CFFCB);
+    background-attachment: fixed;
+    overflow-x: hidden; /* Impede a barra de rolagem horizontal */
+}
+
+/* CABEÇALHO COM MENU A ESQUERDA E TITULOS NO TOPO */
+#cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Títulos centralizados */
+    background-color: #0A3200;
+    color: white;
+    padding: 40px 20px 20px; /* Ajuste o espaçamento para dar mais espaço em torno dos elementos */
+}
+
+/* TÍTULOS NO TOPO */
+#cabecalho h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3em; /* Ajuste do tamanho da fonte */
+    margin-bottom: 10px;
+    margin-top: 0; /* Remova a margem negativa */
+}
+
+#cabecalho h3 {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    color: #e0e7e0;
+    margin-bottom: 20px; /* Espaçamento abaixo do h3 */
+}
+
+/* MENU HORIZONTAL À ESQUERDA */
+nav {
+    width: 100%; /* Faz o menu ocupar toda a largura */
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start; /* Menu alinhado à esquerda */
+    gap: 20px; /* Espaço entre os itens do menu */
+    padding-left: 0;
+    margin: 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: rgba(183, 233, 171, 0.986);
+    font-weight: 500;
+    transition: color 0.3s;
+    background-color: transparent;
+}
+
+/* TAMBÉM APLICANDO A FONTE LOCAL PARA ELEMENTOS COM A CLASSE .fonte */
+.fonte {
+    font-family: 'idroid', sans-serif;
+}
+
+/* CONTEÚDO PRINCIPAL */
+main {
+    background-color: white;
+    border-radius: 0px;
+    box-shadow: 5px 5px 15px #59595993;
+    width: 100%;
+    max-width: 1200px; /* Define um limite para telas grandes */
+    padding: 20px;
+    margin: auto;
+}
+
+main h1 {
+    margin: 10px 15px;
+}
+
+/* PARÁGRAFOS */
+p {
+    font-family: 'Inconsolata', sans-serif;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.6em;
+    margin-bottom: 16px;
+    margin-left: 10px;
+    text-indent: 30px;
+}
+
+/* TÍTULO h2 COM FUNDO GRADIENTE */
+h2 {
+    background: linear-gradient(to right, #3abe66, transparent);
+    color: #0d7508;
+    padding: 10px;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #0d7508;
+    background-color: #3abe667e;
+}
+
+/* IMAGENS */
+img {
+    display: block;
+    margin: 0 auto;
+    width: 100%; /* Responsivo */
+    max-width: 70%; /* Garante que a imagem não ultrapasse a largura da tela */
+}
+
+.bugdroid {
+    width: auto;
+    height: auto;
+}
+
+/* VÍDEO EMBEDADO */
+iframe {
+    display: block;
+    margin: 0 auto;
+    width: 100%; /* Responsivo */
+    height: 500px;
+}
+
+.video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    display: block;
+    background-image: linear-gradient(to top, #013220, #228B22);
+}
+
+.video iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+
+#final {
+    text-align: center;
+    background-color: rgb(99, 182, 99);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+    font-family: 'Work Sans', sans-serif;
+    color: white; 
+    border-radius: 10px; 
+}
+
+/* Ajuste da lista para dividir em duas colunas */
+.android-list {
+    list-style: none;  /* Remove qualquer marcador ou número */
+    padding-left: 0;    /* Remove o padding da lista */
+    margin-left: 0;     /* Remove a margem da lista */
+    display: flex;
+    flex-wrap: wrap;    /* Permite que os itens que não cabem em uma linha sejam movidos para a próxima */
+    justify-content: flex-start; /* Alinha as colunas à esquerda */
+    gap: 10px;          /* Espaço entre os itens da lista */
+}
+
+/* Ajuste da lista para dividir em duas colunas */
+.android-list {
+    list-style: none;  /* Remove qualquer marcador ou número */
+    padding-left: 0;    /* Remove o padding da lista */
+    margin-left: 0;     /* Remove a margem da lista */
+    display: flex;
+    flex-wrap: wrap;    /* Permite que os itens que não cabem em uma linha sejam movidos para a próxima */
+    justify-content: center; /* Centraliza as colunas */
+    gap: 10px;          /* Espaço entre os itens da lista (ajustado para ser menor) */
+}
+
+/* Ajuste dos itens da lista */
+.android-list li {
+    position: relative; /* Necessário para posicionar o ícone */
+    display: flex;      /* Usamos o flexbox para alinhar o conteúdo horizontalmente */
+    align-items: center; /* Alinha o conteúdo verticalmente */
+    justify-content: flex-start; /* Alinha o conteúdo à esquerda */
+    font-size: 18px;    /* Ajuste o tamanho do texto */
+    width: 45%;         /* Define a largura dos itens, para que caibam duas colunas */
+    box-sizing: border-box; /* Garante que a largura de 45% leve em conta o padding e margin */
+}
+
+/* Estilos para o ícone de check */
+.android-list li::before {
+    content: '\2713'; /* Símbolo de verificação (✔) */
+    font-size: 18px;   /* Tamanho do ícone */
+    color: rgb(255, 255, 255);      /* Cor do ícone */
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+}
+
+.lastp {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin: auto;
+    max-width: 1200px;
+    font-family: 'Work Sans', sans-serif;
+    color: rgb(0, 0, 0); 
+    border-radius: 10px;
+}
+
+.destaque {
+    color: #0A3200;
+}
+
+.creditos {
+    background-color: gray;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: smaller;
+    padding: 3px;
+    margin: auto;
+    max-width: 1200px;
+}
